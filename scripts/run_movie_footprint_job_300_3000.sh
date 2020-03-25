@@ -45,7 +45,7 @@ do
     ${FILE_3000} \
     -border 10 \
     -bordercolor white \
-    -geometry 2000x800 \
+    -geometry 3200x800 \
     -tile 1x2 \
     ${TMP_DIR}/${TIME_STEP}.png
 done
