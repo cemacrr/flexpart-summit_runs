@@ -120,7 +120,7 @@ do
       # run job script:
       \cp ${RUN_SCRIPT} ${RD}/run_job.sh
       # increase run time:
-      sed -i 's|0:20:00|6:00:00|g' ${RD}/run_job.sh
+      sed -i 's|0:20:00|8:00:00|g' ${RD}/run_job.sh
       # increase memory:
       sed -i 's|-l h_vmem=16G|-l h_vmem=24G|g' ${RD}/run_job.sh
       # make executable:
