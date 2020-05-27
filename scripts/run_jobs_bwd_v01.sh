@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ALL_DIRS=$(\ls -1d *split_IR*/*)
+ALL_DIRS=$(\ls -1d *split_*/*)
 
 for DIR in ${ALL_DIRS}
 do
