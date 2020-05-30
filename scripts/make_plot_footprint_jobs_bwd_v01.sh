@@ -7,7 +7,7 @@ RUN_SCRIPT=$(dirname $(readlink -f ${0}))/../scripts/run_plot_footprint_job_bwd_
 SPECIES='AIRTRACER AERO-TRACE MIN_DUST'
 
 # for each directory:
-for DIR in $(\ls -1d *split*/* | head -n 1)
+for DIR in $(\ls -1d *split*/*)
 do
     # for each species:
     for SPEC in ${SPECIES}
