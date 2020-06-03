@@ -1,6 +1,6 @@
 #!/bin/bash
 #$ -cwd -V
-#$ -l h_rt=4:00:00
+#$ -l h_rt=2:00:00
 #$ -pe smp 1
 #$ -l h_vmem=8G
 
@@ -14,7 +14,7 @@ module purge
 module load python3
 
 # check which modules are loaded:
-module list
+module list 2>&1
 
 # python script:
 PLOT_SCRIPT='/nobackup/earrr/flexpart/neely/scripts/plot_flexpart_footprint_v01.py'

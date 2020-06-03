@@ -13,7 +13,7 @@ if [ -r /nobackup/cemac/cemac.sh ] ; then
 fi
 module purge
 module load user flexpart
-module list
+module list 2>&1
 
 # run flexpart:
 FLEXPART
