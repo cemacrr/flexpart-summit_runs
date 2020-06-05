@@ -1,6 +1,6 @@
 #!/bin/bash
 #$ -cwd -V
-#$ -l h_rt=2:00:00
+#$ -l h_rt=3:00:00
 #$ -pe smp 1
 #$ -l h_vmem=8G
 
