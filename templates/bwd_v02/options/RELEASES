@@ -10,7 +10,7 @@
 ***************************************************************************************************************
 &RELEASES_CTRL
  NSPEC       =           1, ! Total number of species
- SPECNUM_REL =         100, ! Species numbers in directory SPECIES
+ SPECNUM_REL =          25, ! Species numbers in directory SPECIES
  /
 
 &RELEASE                    ! For each release
