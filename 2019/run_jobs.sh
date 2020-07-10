@@ -1,6 +1,6 @@
 #!/bin/bash
 #$ -cwd -V
-#$ -l h_rt=06:00:00
+#$ -l h_rt=08:00:00
 #$ -pe smp 8
 #$ -l h_vmem=8G
 
