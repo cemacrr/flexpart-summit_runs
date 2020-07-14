@@ -3,6 +3,7 @@
 #$ -l h_rt=08:00:00
 #$ -pe smp 8
 #$ -l h_vmem=8G
+#$ -l disk=4G
 
 # should have 8 arguments, each one being a FLEXPART job directory:
 if [ "${#}" != "8" ] ; then
@@ -27,7 +28,7 @@ module load user flexpart parallel
 module list 2>&1
 
 # run flexpart with parallel:
-parallel 'cd {} ; FLEXPART >& FLEXPART.out' ::: ${JOB_DIRS}
+parallel './flexpart_wrap.sh {}' ::: ${JOB_DIRS}
 
 # print the date:
 date
