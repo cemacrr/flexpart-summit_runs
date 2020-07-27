@@ -14,10 +14,10 @@ TEMPL_DIR=$(dirname $(readlink -f ${0}))/../templates/bwd_v02
 # job running script:
 RUN_SCRIPT=$(dirname $(readlink -f ${0}))/../scripts/run_job.sh
 
-# start time (2019-04-30 21:00):
-START_TIME=1556654400
-# end time (2019-04-01 00:00):
-END_TIME=1554073200
+# start time (2019-04-30 21:00 UTC):
+START_TIME=$(date -u -d '2019-04-30 21:00' +%s)
+# end time (2019-04-01 00:00 UTC):
+END_TIME=$(date -u -d '2019-04-01 00:00' +%s)
 # interval between runs (3 hours):
 RUN_INT=10800
 # run length (32 days):
@@ -37,15 +37,15 @@ END=${END_TIME}
 while [ ${START} -ge ${END} ]
 do
   # start date:
-  SD=$(date -d @${START} +%Y%m%d)
+  SD=$(date -u -d @${START} +%Y%m%d)
   # start hour:
-  SH=$(date -d @${START} +%H%M%S)
+  SH=$(date -u -d @${START} +%H%M%S)
   # run end time:
   ET=$((${START} - ${RUN_LEN}))
   # end date:
-  ED=$(date -d @${ET} +%Y%m%d)
+  ED=$(date -u -d @${ET} +%Y%m%d)
   # end hour:
-  EH=$(date -d @${ET} +%H%M%S)
+  EH=$(date -u -d @${ET} +%H%M%S)
   # for each release height:
   for REL_HEIGHT in ${REL_HEIGHTS}
   do

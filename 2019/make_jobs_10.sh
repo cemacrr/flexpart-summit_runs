@@ -14,10 +14,10 @@ TEMPL_DIR=$(dirname $(readlink -f ${0}))/../templates/bwd_v02
 # job running script:
 RUN_SCRIPT=$(dirname $(readlink -f ${0}))/../scripts/run_job.sh
 
-# start time (2019-10-31 21:00):
-START_TIME=1572555600
-# end time (2019-10-01 00:00):
-END_TIME=1569888000
+# start time (2019-10-31 21:00 UTC):
+START_TIME=$(date -u -d '2019-10-31 21:00' +%s)
+# end time (2019-10-01 00:00 UTC):
+END_TIME=$(date -u -d '2019-10-01 00:00' +%s)
 # interval between runs (3 hours):
 RUN_INT=10800
 # run length (32 days):
